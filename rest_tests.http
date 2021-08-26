@@ -1,0 +1,16 @@
+# REST_CLIENT_BASE_URL must be defined in .env file
+@baseUrl = {{$dotenv REST_CLIENT_BASE_URL}}
+
+GET {{baseUrl}}/api/hello HTTP/1.1
+
+{
+    "key": "val"
+}
+###
+
+POST {{baseUrl}}/api/hello HTTP/1.1
+content-type: application/json
+
+{
+    "key": "val"
+}
